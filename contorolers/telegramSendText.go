@@ -30,7 +30,7 @@ func TelegramSendText() gin.HandlerFunc {
 		chat, err := telegram.ChatByID(requestBody.ChatId)
 		common.IsErr(err)
 
-		_, err = telegram.Send(chat, requestBody.Text)
+		_, err = telegram.Send(chat, requestBody.Text, tele.ModeMarkdown)
 		common.IsErr(err)
 
 		context.JSON(http.StatusOK, gin.H{
