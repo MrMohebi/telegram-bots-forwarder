@@ -1,3 +1,7 @@
-[Bot1]
-TOKEN = "0000"
-URL = "https://api.ursite.com/hook"
+[SECTION_1]
+KEY1 = aaaa
+KEY2 = bbbb
+
+[SECTION_2]
+KEY1 = aaaa
+KEY2 = bbbb
