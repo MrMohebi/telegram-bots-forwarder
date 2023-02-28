@@ -28,11 +28,6 @@ func ListenOnTelegramBot(botName string, token string, callUrl string) {
 	}
 
 	b.Handle(tele.OnText, func(c tele.Context) error {
-		var (
-			//user = c.Sender()
-			text = c.Text()
-		)
-
 		data := SendTelegramRequest{
 			Message: c.Message(),
 			User:    c.Sender(),
@@ -42,8 +37,7 @@ func ListenOnTelegramBot(botName string, token string, callUrl string) {
 		_, err = http.Post(callUrl, "application/json", bytes.NewBuffer(dataJSON))
 		common.IsErr(err, "Could not make POST request to httpbin")
 
-		println(string(dataJSON))
-		return c.Send(text)
+		return nil
 	})
 
 	println("bot " + botName + " is up and running")
