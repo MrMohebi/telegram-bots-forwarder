@@ -1,7 +1,3 @@
-[SECTION_1]
-KEY1 = aaaa
-KEY2 = bbbb
-
-[SECTION_2]
-KEY1 = aaaa
-KEY2 = bbbb
+[PROJECT_NAME]
+TOKEN = TELEGRAM_TOKEN
+URL = PROJECT_URL_to_request_be_forwarded
